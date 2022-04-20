@@ -28,12 +28,12 @@ int main(){
 
 	int aposta[6];
 
-	aposta[0] = 5;
-	aposta[1] = 13;
-	aposta[2] = 18;
-	aposta[3] = 23;
-	aposta[4] = 37;
-	aposta[5] = 53;
+	aposta[0] = 9;
+	aposta[1] = 17;
+	aposta[2] = 24;
+	aposta[3] = 28;
+	aposta[4] = 39;
+	aposta[5] = 50;
 
 	bool ganhou = false;
 	int sorteio[6];
