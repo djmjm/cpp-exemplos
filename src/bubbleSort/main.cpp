@@ -1,5 +1,6 @@
 #include <iostream>
 #include <time.h>
+#include <stdlib.h>
 
 #define RANDOMIZE srand(time(NULL))
 #define COUT_CUSTOM_OPERATOR_LIST \
@@ -49,7 +50,7 @@ class List{
         void generate_list_number(){
             list[0] = size;
             for(int i = 1; i <= size; i++){
-                list[i] = rand() % 1024;
+                list[i] = (int) (rand() % 1024);
             }
 
             if(type == descendent) { bubble_sort_desc(); }
@@ -58,7 +59,7 @@ class List{
 
         void create_object(){
             size = 10;
-            list = new int(size+1);
+            list = (int*) malloc(4*(size+1));
             generate_list_number();
         }
 
@@ -67,6 +68,7 @@ class List{
             type = unsorted;
             create_object();
         };
+
         List(sort type){
             this->type = type;
             create_object();
@@ -92,9 +94,9 @@ int main(){
 
     RANDOMIZE;
 
-    auto unsortedList = *(new List());
-    auto descendentList = *(new List(descendent));
-    auto ascendentList = *(new List(ascendent));
+    List &unsortedList = *(new List());
+    List &descendentList = *(new List(sort::descendent));
+    List &ascendentList = *(new List(sort::ascendent));
 
     cout << unsortedList
          << descendentList
