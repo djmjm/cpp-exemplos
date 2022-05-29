@@ -56,8 +56,6 @@ int main(){
 	cout << "|SEED GENERATED ->>" << endl
 	     <<  generator << endl;
 
-	//RANDOMIZE;
-
 	cout << "|RANDOM NUMBER GENERATE ->>" << endl
 		 << GENERATE_INTEGER << endl;
 
