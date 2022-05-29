@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <thread>
 
 #include <iostream>
@@ -8,7 +7,6 @@
 
 #define RANGE 1024
 #define PI 3.14159265
-#define RANDOMIZE srand(get_final_seed(seed_final))
 #define GENERATE_INTEGER (unsigned long int) \
 		( generator * pow(10, 50) ) % RANGE
 
