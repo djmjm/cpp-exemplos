@@ -4,6 +4,23 @@
 
 using namespace std;
 
+string reverse_string(string origin){
+    stack<char> stack;
+    
+    for(char letter : origin){
+        stack.push(letter);
+    }
+    
+    string answer = "";
+    
+    while(!stack.empty()){
+        answer += stack.top();
+        stack.pop();
+    }
+    
+    return answer;
+}
+
 string check_value( unsigned long int toma_essa){
     string answer = "";
     while(toma_essa > 0){
