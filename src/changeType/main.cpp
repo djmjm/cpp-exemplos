@@ -6,11 +6,10 @@ auto _my_string = []{ return "okokok"; };
 
 auto _my_function = []{ 
     return _my_string();
-} ;
+};
 
- void* change_type(){
-    int size = sizeof( _my_function() );
-    char *answer = (char*) malloc(size);
+void* change_type(){
+    char *answer = NULL;
     answer = (char*) _my_function();
     
     void *result = (void*) answer;
@@ -18,9 +17,7 @@ auto _my_function = []{
     return result;
 }
 
-int main()
-{
+int main(){
     cout << (char *) change_type() << endl;
-    
     return 0;
 }
